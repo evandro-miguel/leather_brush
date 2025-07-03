@@ -1,3 +1,5 @@
 name = "leather-brush"
 compatibility_date = "2025-07-03"
-pages_build_output_dir = "."
+
+[site]
+bucket = "./download-gate"
