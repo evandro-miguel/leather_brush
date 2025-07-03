@@ -1,4 +1,6 @@
-name = "leather-brush"
-compatibility_date = "2025-07-03"
-
-pages_build_output_dir = "download-gate"
+  name = "leather-brush"
+  main = "src/index.html"
+  compatibility_date = "2025-07-03"
+  [assets]
+  directory = "./distownload-gate"
+  binding = "ASSETS"
