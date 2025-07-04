@@ -1,1 +1,1 @@
-feat: Add redirects for social media links
+fix: Set buildCommand to empty in pages.yml for static site deployment

@@ -23,4 +23,5 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: 'leather-brush-site' # Replace with your project name
           directory: 'public'
+          buildCommand: ''
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
