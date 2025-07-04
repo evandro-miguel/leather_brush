@@ -21,7 +21,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: 'leather-brush-site' # Replace with your project name
+          projectName: 'leather_brush_02' # Replace with your project name
           directory: 'public'
           buildCommand: ''
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}

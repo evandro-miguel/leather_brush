@@ -1,1 +1,1 @@
-fix: Set buildCommand to empty in pages.yml for static site deployment
+fix: Update project name to leather_brush_02 in pages.yml
