@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evandro Miguel Jr. - Digital Artist</title>
-    <link rel="icon" href="img/Evandro_logo_fav.png" type="image/png">
+    <link rel="icon" href="img/Evandro_logo_fav_trans.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
         body {
@@ -19,13 +19,14 @@
             color: #fff;
         }
         .logo {
-            width: 150px;
-            height: 150px;
+            width: 260px; /* Increased size */
+            height: 260px; /* Increased size */
             margin-bottom: 40px;
         }
         .social-links {
             display: flex;
             gap: 20px;
+            margin-bottom: 30px; /* Added margin */
         }
         .social-btn {
             display: flex;
@@ -47,11 +48,36 @@
         .social-btn.linkedin:hover { background-color: #0077b5; }
         .social-btn.artstation:hover { background-color: #13aff0; }
         .social-btn.instagram:hover { background-color: #e4405f; }
-        .social-btn.email:hover { background-color: #c71610; }
+        
+        .email-container {
+            display: flex;
+            align-items: center;
+            background-color: #1f1f1f;
+            border-radius: 8px;
+            padding: 10px 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .email-text {
+            font-size: 1rem;
+            margin-right: 15px;
+            color: #ccc;
+        }
+        .copy-btn {
+            background: #007bff;
+            border: none;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .copy-btn:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
-    <img src="img/Evandro_logo_v2.png" alt="Evandro Miguel Jr. Logo" class="logo">
+    <img src="img/Evandro_logo_v2_transparent.png" alt="Evandro Miguel Jr. Logo" class="logo">
     <div class="social-links">
         <a href="https://www.linkedin.com/in/evandro-miguel-jr/" target="_blank" class="social-btn linkedin" aria-label="LinkedIn">
             <i class="fab fa-linkedin-in"></i>
@@ -62,9 +88,23 @@
         <a href="https://www.instagram.com/evandro.miguel.jr/" target="_blank" class="social-btn instagram" aria-label="Instagram">
             <i class="fab fa-instagram"></i>
         </a>
-        <a href="mailto:me@evandro-miguel.com" class="social-btn email" aria-label="Email">
-            <i class="fas fa-envelope"></i>
-        </a>
     </div>
+    <div class="email-container">
+        <span class="email-text" id="email">me@evandro-miguel.com</span>
+        <button class="copy-btn" onclick="copyEmail()">
+            <i class="fas fa-copy"></i>
+        </button>
+    </div>
+
+    <script>
+        function copyEmail() {
+            const emailText = document.getElementById('email').innerText;
+            navigator.clipboard.writeText(emailText).then(() => {
+                alert('Email copied to clipboard!');
+            }, (err) => {
+                console.error('Could not copy text: ', err);
+            });
+        }
+    </script>
 </body>
 </html>
